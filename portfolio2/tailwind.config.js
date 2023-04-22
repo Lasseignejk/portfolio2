@@ -7,6 +7,8 @@ export default {
 			themeLtBlueGray: "#a2c4e0",
 			themeBlueGray: "#82a4e3",
 			themeDkBlueGray: "#52688F",
+			themeDkText: "#0a0e39",
+			themeLtText: "#ced1f2",
 			avocadoBackground: "#387f5f",
 			avocadoText: "#efebe4",
 			eggBackground: "#ff9d00",
@@ -15,7 +17,7 @@ export default {
 			readsText: "#140024",
 		},
 		fontFamily: {
-			theme: "",
+			themeText: ["Patrick Hand", "cursive"],
 			avocadoText: ["Hind Madurai", "sans-serif"],
 			eggTitle: ["Grandstander", "cursive"],
 			eggText: ["Nunito", "sans-serif"],
