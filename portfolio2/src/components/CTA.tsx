@@ -7,7 +7,7 @@ const CTA = () => {
 			offset={3}
 			style={{
 				textAlign: "center",
-				backgroundColor: "#f7cb2d",
+				backgroundColor: "#a2c4e0",
 			}}></ParallaxLayer>
 	);
 };

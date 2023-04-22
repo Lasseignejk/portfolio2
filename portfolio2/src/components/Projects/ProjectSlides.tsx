@@ -10,14 +10,20 @@ const pages: ((
 	props: AnimatedProps<{ style: CSSProperties }>
 ) => React.ReactElement)[] = [
 	({ style }) => (
-		<animated.div style={{ ...style, background: "lightpink" }}>A</animated.div>
+		<animated.div style={{ ...style, background: "#387f5f" }}>
+			<div>
+				<img src="/avocado_gray.png" />
+			</div>
+		</animated.div>
 	),
 	({ style }) => (
-		<animated.div style={{ ...style, background: "lightblue" }}>B</animated.div>
+		<animated.div style={{ ...style, background: "#ff9d00" }}>
+			<h1 className="font-eggTitle text-eggText text-5xl">The Broken Egg</h1>
+		</animated.div>
 	),
 	({ style }) => (
-		<animated.div style={{ ...style, background: "lightgreen" }}>
-			C
+		<animated.div style={{ ...style, background: "#f7dfff" }}>
+			<h1 className="font-readsTitle text-readsText text-5xl">BetterReads</h1>
 		</animated.div>
 	),
 ];

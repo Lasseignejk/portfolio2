@@ -9,7 +9,7 @@ const Projects = (): JSX.Element => {
 				textAlign: "center",
 				backgroundColor: "#a2c4e0",
 			}}>
-			<div className="">
+			<div className="w-3/4 h-3/4">
 				<ProjectSlides />
 			</div>
 		</ParallaxLayer>
