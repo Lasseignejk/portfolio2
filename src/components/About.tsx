@@ -1,21 +1,21 @@
 import { ParallaxLayer } from "@react-spring/parallax";
-import {
-	FaJsSquare,
-	FaHtml5,
-	FaCss3Alt,
-	FaGithub,
-	FaReact,
-	FaPython,
-	FaNode,
-	FaDocker,
-	FaFileDownload,
-} from "react-icons/fa";
-import {
-	SiTailwindcss,
-	SiTypescript,
-	SiPostgresql,
-	SiRedux,
-} from "react-icons/si";
+// import {
+// 	FaJsSquare,
+// 	FaHtml5,
+// 	FaCss3Alt,
+// 	FaGithub,
+// 	FaReact,
+// 	FaPython,
+// 	FaNode,
+// 	FaDocker,
+// 	FaFileDownload,
+// } from "react-icons/fa";
+// import {
+// 	SiTailwindcss,
+// 	SiTypescript,
+// 	SiPostgresql,
+// 	SiRedux,
+// } from "react-icons/si";
 
 const About = (): JSX.Element => {
 	return (
