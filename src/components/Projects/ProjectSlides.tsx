@@ -5,7 +5,8 @@ import {
 	AnimatedProps,
 	useSpringRef,
 } from "@react-spring/web";
-import { FaGithub, FaYoutube } from "react-icons/fa";
+import Avocado from "./Avocado";
+import { FaArrowCircleRight } from "react-icons/fa";
 
 const pages: ((
 	props: AnimatedProps<{ style: CSSProperties }>
@@ -20,39 +21,7 @@ const pages: ((
 				flexDirection: "column",
 				gap: "20px",
 			}}>
-			<div className="">
-				<img src="/avocado_gray.png" />
-			</div>
-			<div>
-				<img
-					src="/AvocadoManageRestaurants.png"
-					className="border-2 border-themeDkText"
-				/>
-			</div>
-			<div>
-				<FaGithub />
-				<FaYoutube />
-			</div>
-			<div>
-				<h3>Description</h3>
-				<p>
-					Inspired by the POS software 'Toast', 'Avocado' is a site where
-					restaurant owners can view current orders and reports for their
-					restaurants. They can also edit their menus and upload photos. On the
-					opposite side, customers can view restaurants and place orders.{" "}
-				</p>
-			</div>
-			<div>
-				<h3>Role</h3>
-				<p>
-					As the project manager of a group of four, I participated in daily
-					standups with my instructors and led daily standups with my team. Not
-					only was I in charge of the styling of Avocado, based on mockups
-					created by my team, I also assisted and debugged code on both the
-					front and back ends and kept everyone organized using Figma and GitHub
-					Projects.
-				</p>
-			</div>
+			<Avocado />
 		</animated.div>
 	),
 	({ style }) => (
@@ -84,10 +53,21 @@ export default function App() {
 		transRef.start();
 	}, [index]);
 	return (
-		<div className="container" onClick={onClick}>
+		<div className="container">
+			<button
+				className="text-black border-2 border-black"
+				type="button"
+				onClick={onClick}>
+				<FaArrowCircleRight />
+			</button>
+
 			{transitions((style, i) => {
 				const Page = pages[i];
-				return <Page style={style} />;
+				return (
+					<>
+						<Page style={style} />
+					</>
+				);
 			})}
 		</div>
 	);

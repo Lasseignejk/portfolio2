@@ -18,7 +18,7 @@ const App = (): JSX.Element => {
 	return (
 		<div>
 			<Nav scroll={scroll} />
-			<Parallax pages={4} ref={ref}>
+			<Parallax pages={5} ref={ref}>
 				<Home />
 				<About />
 				<Projects />

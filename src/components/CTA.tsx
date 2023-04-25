@@ -4,13 +4,13 @@ const CTA = () => {
 	return (
 		<>
 			<ParallaxLayer
-				offset={3}
+				offset={4}
 				style={{
 					textAlign: "center",
 					backgroundColor: "#a2c4e0",
 				}}></ParallaxLayer>
 			<ParallaxLayer
-				offset={3}
+				offset={4}
 				speed={0.5}
 				style={{
 					display: "flex",

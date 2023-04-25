@@ -5,6 +5,7 @@ const Projects = (): JSX.Element => {
 	return (
 		<ParallaxLayer
 			offset={2}
+			factor={2}
 			style={{
 				textAlign: "center",
 				backgroundColor: "#a2c4e0",
