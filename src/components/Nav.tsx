@@ -5,8 +5,18 @@ interface NavProps {
 }
 
 const Nav = ({ scroll }: NavProps): JSX.Element => {
+	let width: number = window.innerWidth;
+	let height: number = window.innerHeight;
+	let contactScroll: number = 5;
+
+	if (width < 768) {
+		contactScroll = 5;
+	} else if (width < 978) {
+		contactScroll = 4;
+	}
+
 	return (
-		<nav className="fixed bottom-0 top-auto left-0 z-10 flex justify-evenly w-full md:justify-end md:w-[calc(100%-18px)] md:top-0 md:bottom-auto">
+		<nav className="bg-themeLtBlueGray fixed bottom-0 top-auto left-0 z-10 flex justify-evenly w-full md:justify-end md:w-[calc(100%-18px)] md:top-0 md:bottom-auto md:bg-navTransparent">
 			<ul className="flex gap-8 justify-evenly w-full  md:justify-end py-3 px-3">
 				<li
 					onClick={() => scroll(0)}
@@ -27,7 +37,7 @@ const Nav = ({ scroll }: NavProps): JSX.Element => {
 					<p className="hidden md:block">Projects</p>
 				</li>
 				<li
-					onClick={() => scroll(4)}
+					onClick={() => scroll(contactScroll)}
 					className="text-3xl flex items-center gap-2 hover:cursor-pointer duration-200 ease-in textShadow relative navItem">
 					<FaEnvelope />
 					<p className="hidden md:block">Contact</p>

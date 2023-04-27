@@ -15,10 +15,19 @@ const App = (): JSX.Element => {
 			ref.current.scrollTo(to);
 		}
 	};
+	let width: number = window.innerWidth;
+	let height: number = window.innerHeight;
+	let pages: number = 6;
+
+	if (width < 768) {
+		pages = 6;
+	} else if (width < 978) {
+		pages = 4;
+	}
 	return (
 		<div>
 			<Nav scroll={scroll} />
-			<Parallax pages={5} ref={ref}>
+			<Parallax pages={pages} ref={ref}>
 				<Home />
 				<About />
 				<Projects />

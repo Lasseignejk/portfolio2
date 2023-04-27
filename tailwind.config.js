@@ -15,6 +15,7 @@ export default {
 			eggText: "#523200",
 			readsBackground: "#f7dfff",
 			readsText: "#140024",
+			navTransparent: "rgba(0,0,0,0)",
 		},
 		fontFamily: {
 			themeText: ["Patrick Hand", "cursive"],

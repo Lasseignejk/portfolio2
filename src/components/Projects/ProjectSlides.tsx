@@ -7,6 +7,8 @@ import {
 } from "@react-spring/web";
 import Avocado from "./Avocado";
 import { FaArrowCircleRight } from "react-icons/fa";
+import TheBrokenEgg from "./TheBrokenEgg";
+import BetterReads from "./BetterReads";
 
 const pages: ((
 	props: AnimatedProps<{ style: CSSProperties }>
@@ -25,15 +27,32 @@ const pages: ((
 		</animated.div>
 	),
 	({ style }) => (
-		<animated.div style={{ ...style, background: "#ff9d00", padding: "2rem" }}>
-			<div>
-				<h1 className="font-eggTitle text-eggText text-3xl">The Broken Egg</h1>
-			</div>
+		<animated.div
+			style={{
+				...style,
+				background: "#ff9d00",
+				padding: "2rem",
+				display: "flex",
+				flexDirection: "column",
+				gap: "20px",
+				color: "#523200",
+				alignContent: "space-between",
+			}}>
+			<TheBrokenEgg />
 		</animated.div>
 	),
 	({ style }) => (
-		<animated.div style={{ ...style, background: "#f7dfff", padding: "2rem" }}>
-			<h1 className="font-readsTitle text-readsText text-3xl">BetterReads</h1>
+		<animated.div
+			style={{
+				...style,
+				background: "#f7dfff",
+				padding: "2rem",
+				display: "flex",
+				flexDirection: "column",
+				gap: "30px",
+				color: "#140024",
+			}}>
+			<BetterReads />
 		</animated.div>
 	),
 ];
@@ -53,22 +72,31 @@ export default function App() {
 		transRef.start();
 	}, [index]);
 	return (
-		<div className="container">
-			<button
-				className="text-black border-2 border-black"
-				type="button"
+		<>
+			<span
+				className="flex w-screen justify-center p-2  text-themeDkText hover:cursor-pointer md:hidden"
 				onClick={onClick}>
-				<FaArrowCircleRight />
-			</button>
-
-			{transitions((style, i) => {
-				const Page = pages[i];
-				return (
-					<>
-						<Page style={style} />
-					</>
-				);
-			})}
-		</div>
+				<button className="text-black text-2xl flex" type="button">
+					<FaArrowCircleRight />
+				</button>
+			</span>
+			<div className="container">
+				{transitions((style, i) => {
+					const Page = pages[i];
+					return (
+						<>
+							<span
+								className="hidden  w-screen justify-end p-2 text-themeDkText hover:cursor-pointer mt-[60px] z-10 md:absolute md:flex"
+								onClick={onClick}>
+								<button className="text-black text-6xl flex" type="button">
+									<FaArrowCircleRight />
+								</button>
+							</span>
+							<Page style={style} />
+						</>
+					);
+				})}
+			</div>
+		</>
 	);
 }

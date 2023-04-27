@@ -1,16 +1,25 @@
 import { ParallaxLayer } from "@react-spring/parallax";
 
-const CTA = () => {
+const CTA = (): JSX.Element => {
+	let width: number = window.innerWidth;
+	let height: number = window.innerHeight;
+	let offset: number = 5;
+
+	if (width < 768) {
+		offset = 5;
+	} else if (width < 978) {
+		offset = 3;
+	}
 	return (
 		<>
 			<ParallaxLayer
-				offset={4}
+				offset={offset}
 				style={{
 					textAlign: "center",
 					backgroundColor: "#a2c4e0",
 				}}></ParallaxLayer>
 			<ParallaxLayer
-				offset={4}
+				offset={offset}
 				speed={0.5}
 				style={{
 					display: "flex",
