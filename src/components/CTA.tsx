@@ -8,7 +8,7 @@ const CTA = (): JSX.Element => {
 	if (width < 768) {
 		offset = 5;
 	} else if (width < 978) {
-		offset = 3;
+		offset = 4;
 	}
 	return (
 		<>

@@ -33,7 +33,7 @@ const Projects = (): JSX.Element => {
 		factorNum = 3;
 		console.log(factorNum);
 	} else if (width < 978) {
-		factorNum = 1;
+		factorNum = 2;
 	}
 
 	return (

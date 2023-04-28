@@ -4,10 +4,10 @@ import { SiRedux, SiSupabase, SiTailwindcss, SiPlotly } from "react-icons/si";
 const Avocado = () => {
 	return (
 		<>
-			<div className="flex justify-center">
+			<div className="flex justify-center md:mt-12">
 				<img src="/avocado_gray.svg" className="w-[150px]" />
 			</div>
-			<div className="">
+			<div className="flex justify-center">
 				<img
 					src="/AvocadoManageRestaurants.png"
 					className="border-2 border-themeDkText rounded-xl"
@@ -39,7 +39,7 @@ const Avocado = () => {
 				</p>
 			</div>
 			<div>
-				<h3 className="text-2xl font-bold textShadow">Challenges</h3>
+				<h3 className="text-xl font-bold textShadow">Challenges</h3>
 				<p>
 					One of the largest challenges I faced on Avocado was keeping the group
 					organized. Even though we had spent a day or two planning out the flow

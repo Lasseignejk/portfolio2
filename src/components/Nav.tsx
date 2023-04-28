@@ -16,8 +16,8 @@ const Nav = ({ scroll }: NavProps): JSX.Element => {
 	}
 
 	return (
-		<nav className="bg-themeLtBlueGray fixed bottom-0 top-auto left-0 z-10 flex justify-evenly w-full md:justify-end md:w-[calc(100%-18px)] md:top-0 md:bottom-auto md:bg-navTransparent">
-			<ul className="flex gap-8 justify-evenly w-full  md:justify-end py-3 px-3">
+		<nav className="bg-themeLtBlueGray fixed bottom-0 top-auto left-0 z-10 flex justify-evenly w-full md:w-[calc(100%-18px)] md:top-0 md:bottom-auto md:bg-navTransparent lg:justify-end">
+			<ul className="flex gap-8 justify-evenly w-full py-3 px-3 lg:justify-end">
 				<li
 					onClick={() => scroll(0)}
 					className="text-3xl flex items-center gap-2 hover:cursor-pointer duration-200 ease-in textShadow relative navItem">

@@ -22,7 +22,7 @@ const App = (): JSX.Element => {
 	if (width < 768) {
 		pages = 6;
 	} else if (width < 978) {
-		pages = 4;
+		pages = 5;
 	}
 	return (
 		<div>
