@@ -10,7 +10,7 @@ const Avocado = () => {
 			<div className="flex justify-center">
 				<img
 					src="/AvocadoManageRestaurants.png"
-					className="border-2 border-themeDkText rounded-xl"
+					className="border-2 border-themeDkText rounded-xl md:w-3/4 md:max-w-[700px]"
 				/>
 			</div>
 			<div className="flex justify-center gap-14 text-4xl">
